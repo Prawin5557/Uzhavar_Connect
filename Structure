@@ -1,0 +1,33 @@
+uzhavarconnect/
+├── backend/
+│   ├── uzhavarconnect/        # Django project
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── api/                  # Django app (users, products, orders)
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   └── urls.py
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── README.md
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/       # Reusable UI components
+│   │   ├── pages/            # Screens (Login, Signup, Dashboard)
+│   │   ├── dashboards/       # FarmerDashboard, BuyerDashboard
+│   │   ├── services/         # API calls
+│   │   ├── context/          # Global state
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── public/
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
+│
+├── .gitignore
+├── README.md
+└── LICENSE
