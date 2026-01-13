@@ -20,7 +20,7 @@ function Login() {
     }
 
     try {
-      const res = await fetch(`${API_BASE_URL}/login/`, {
+      const res = await fetch(`${API_BASE_URL.replace(/\/$/, "")}/login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

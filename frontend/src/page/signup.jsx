@@ -36,7 +36,7 @@ function Signup() {
     }
 
     try {
-      const res = await fetch(`${API_BASE_URL}/signup/`, {
+      const res = await fetch(`${API_BASE_URL.replace(/\/$/, "")}/signup/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -72,21 +72,27 @@ function Signup() {
 
               <form onSubmit={handleSubmit}>
                 <input className="form-control form-control-sm mb-2" placeholder="Full Name"
+                  value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })} />
 
                 <input type="date" className="form-control form-control-sm mb-2"
+                  value={form.dob}
                   onChange={(e) => setForm({ ...form, dob: e.target.value })} />
 
                 <input type="email" className="form-control form-control-sm mb-2" placeholder="Email"
+                  value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })} />
 
                 <textarea className="form-control form-control-sm mb-2" rows="2" placeholder="Address"
+                  value={form.address}
                   onChange={(e) => setForm({ ...form, address: e.target.value })}></textarea>
 
                 <input type="tel" className="form-control form-control-sm mb-2" placeholder="Phone"
+                  value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })} />
 
                 <select className="form-select form-select-sm mb-2"
+                  value={form.role}
                   onChange={(e) => setForm({ ...form, role: e.target.value })}>
                   <option value="">Select role</option>
                   <option value="farmer">Farmer</option>
@@ -94,13 +100,16 @@ function Signup() {
                 </select>
 
                 <input type="password" className="form-control form-control-sm mb-2" placeholder="Password"
+                  value={form.password}
                   onChange={(e) => setForm({ ...form, password: e.target.value })} />
 
                 <input type="password" className="form-control form-control-sm mb-2" placeholder="Confirm Password"
+                  value={form.confirmPassword}
                   onChange={(e) => setForm({ ...form, confirmPassword: e.target.value })} />
 
                 <div className="form-check mb-2">
                   <input type="checkbox" className="form-check-input"
+                    checked={form.terms}
                     onChange={(e) => setForm({ ...form, terms: e.target.checked })} />
                   <label className="form-check-label small">Accept terms</label>
                 </div>

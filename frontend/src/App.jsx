@@ -7,6 +7,7 @@ import About from "./page/about";
 import FarmerDashboard from "./page/FarmerDashboard";
 import BuyerDashboard from "./page/BuyerDashboard";
 import BillingPage from "./page/BillingPage";
+import FarmerReport from "./page/FarmerSalesReport";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <Route path="/buyer" element={<BuyerDashboard />} />
         {/* BILLING */}
         <Route path="/billing" element={<BillingPage />} />
+        <Route path="/farmer-report" element={<FarmerReport />} />
+
+
       </Routes>
     </Router>
   );
