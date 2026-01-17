@@ -10,13 +10,13 @@ It empowers farmers to sell produce at fair prices and allows buyers to purchase
 
 ### Frontend
 - React (Vite)
-- Bootstrap / Tailwind CSS
+- Bootstrap 
 - Fetch API
 
 ### Backend
 - Django
 - Django REST Framework
-- SQLite / PostgreSQL
+- SQLite 
 
 ### Authentication
 - Email & password login
